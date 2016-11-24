@@ -3,13 +3,19 @@
 The following files are utilized for running this playbook:
 
 ansible.cfg
+
 hosts
+
 secrets.yml
+
 show_code.yml
 
 
+
 Of the 4 files, these 2 files would have to be edited to suit requirements:
+
 hosts
+
 secrets.yml
 
 
