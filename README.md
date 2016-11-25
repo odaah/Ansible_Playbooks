@@ -2,21 +2,21 @@
 
 The following files are utilized for running this playbook:
 
-ansible.cfg
+-ansible.cfg
 
-hosts
+-hosts
 
-secrets.yml
+-secrets.yml
 
-show_code.yml
+-show_code.yml
 
 
 
 Of the 4 files, these 2 files would have to be edited to suit requirements:
 
-hosts
+-hosts
 
-secrets.yml
+-secrets.yml
 
 
 https://network-maven.com/2016/11/24/ansible-basic-playbook/
