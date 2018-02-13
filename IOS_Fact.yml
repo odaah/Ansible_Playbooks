@@ -1,0 +1,22 @@
+---
+- hosts: pios
+  gather_facts: true
+  connection: local
+
+  tasks:
+  - name: OBTAIN LOGIN CREDENTIALS
+    include_vars: secrets.yml
+
+  - name: DEFINE PROVIDER
+    set_fact:
+      provider:
+        host: "{{ inventory_hostname }}"
+        username: "{{ creds['username'] }}"
+        password: "{{ creds['password'] }}"
+        auth_pass: "{{ creds['auth_pass'] }}"
+
+  - ios_facts:
+      gather_subset: hardware
+      provider: "{{ provider }}"
+    register: regt
+  - debug: var=regt
